@@ -1,6 +1,6 @@
 .container{
     width:calc(100% - 15px);
-    height: 250px;
+    height: auto;
     margin: 20px auto;
     display: flex;
     justify-content: center;
@@ -8,6 +8,7 @@
     background-color: #25292e;
     border-radius: 10px;
     color: white;
+    padding: 20px 15px;
 }
 
 @media screen and (min-width: 768px){

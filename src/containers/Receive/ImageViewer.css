@@ -1,0 +1,87 @@
+.img-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+    padding:10px 15px;
+}
+
+.title{
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #fff;
+    height: 60px;
+}
+
+.images{
+    width: 100%;
+    height: auto;
+}
+
+.images ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+}
+
+.images ul li {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 5px 5px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    justify-content: space-between;
+}
+.images ul li span.sno{
+    flex: calc(20% - 10px);
+}
+.images ul li span.name{
+    flex: calc(60% - 20px);
+    margin-left:10px;
+    margin-right:10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size:16px;
+    text-transform: uppercase;
+}
+
+.images ul li div.action {
+    flex: calc(40% - 10px);
+}
+.images ul li:nth-child(2n) {
+    background-color: #ffffffab;
+    color: #000;
+}
+.images ul li:nth-child(2n+1) {
+    background-color: #000;
+    color: #fff;
+}
+.images ul li:last-child {
+    margin-bottom: 0;
+}
+
+.images ul li button{
+    background-color: #456ac7;
+    border-radius: 23px;
+    border: 4px solid #196cab;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 2px 10px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+}
