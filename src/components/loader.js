@@ -1,6 +1,7 @@
+import './loader.css';
 function Loader() {
     return(
-        <div className="Loader"> Loading....</div>
+        <span className="loader"></span>
     )
 }
 export default Loader;
