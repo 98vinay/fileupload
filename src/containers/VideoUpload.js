@@ -7,15 +7,18 @@ class VideoUpload extends Component {
     loading:true,
     url: 'http://10.119.176.8:3001',
     file:null,
-    uploadStatus:true
+    uploadStatus:true,
+    error:false
   }
   componentDidMount() {
     fetch(this.state.url).then((data) => {
       if(data.status === 200) {
         this.setState({loading: false});
+        this.setState({error:false});
       }
     }).catch((error) => {
-      this.setState({loading: true});
+      this.setState({loading: false});
+      this.setState({error:true});
       console.log(error);
     });
   }
@@ -37,24 +40,28 @@ class VideoUpload extends Component {
         event.target.reset();
         this.setState({loading:false});
         this.setState({uploadStatus:true});
+        this.setState({file:null});
+        this.setState({error:false});
       }
     }).catch((error) => {
       this.setState({loading:false});
       event.target.reset();
       alert('File upload failed');
       this.setState({uploadStatus:true});
+      this.setState({file:null});
+      this.setState({error:true});
       console.log(error);
     });
   }
   render() {
     return (
       <div className="container">
-        {this.state.loading? <Loader />  : <div>
+        {this.state.loading? <Loader />  : this.state.error? <div className="error">Can't connect to Server Try Again!!</div> : (<div>
           <form onSubmit={this.onformSubmit}>
           <FileInput onChange={this.onChangeHandler} /> 
           <button type="submit" className="upload_btn" disabled={this.state.uploadStatus}>Upload</button>
           </form>
-          </div>} 
+          </div>)}
       </div>
     );
   }
