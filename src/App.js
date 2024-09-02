@@ -1,28 +1,35 @@
-import React, {useState} from 'react';
-import './App.css';
-import VideoUpload from './containers/Upload/VideoUpload';
-import Home from './containers/Home/Home';
-import ImageViewer from './containers/Receive/ImageViewer';
-import { createBrowserRouter,RouterProvider } from 'react-router-dom';
+import React from "react";
+import "./App.css";
+import config from "./config";
+import VideoUpload from "./containers/Upload/VideoUpload";
+import Home from "./containers/Home/Home";
+import ImageViewer from "./containers/Receive/ImageViewer";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 function App() {
-  const [url,setUrl] = useState('http://10.119.176.8:3001');
   const Router = createBrowserRouter([
     {
-      path: '/',
-      element: <Home base={url}/>
+      path: "/",
+      element: <Home base={config.URL} />,
     },
     {
-      path: '/upload',
-      element: <VideoUpload base={url}/>
+      path: config.upload,
+      element: <VideoUpload base={config.URL} path={config.upload} />,
     },
     {
-      path: '/receive',
-      element: <ImageViewer base={url}/>
-    }
+      path: config.receive,
+      element: (
+        <ImageViewer
+          base={config.URL}
+          path={config.receive}
+          listEndpoint={config.listImages}
+          downloadEndpoint={config.downloadImage}
+        />
+      ),
+    },
   ]);
   return (
     <div>
-        <RouterProvider router={Router} />
+      <RouterProvider router={Router} />
     </div>
   );
 }

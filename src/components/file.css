@@ -1,0 +1,70 @@
+.fileuploadcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+.fileuploadcontainer .fileInputcontainer {
+  width: 100%;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+.fileuploadcontainer .fileInputcontainer p {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #ffffff9a;
+  text-align: left;
+}
+.fileuploadcontainer .fileInputcontainer .fileInput {
+  width: 100%;
+  border: 2px dotted #fff;
+  text-transform: capitalize;
+}
+
+.fileInputTextcontainer {
+  width: 100%;
+  padding: 10px 5px;
+}
+
+.fileInputTextHeading {
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 12px;
+}
+
+.fileInputTextData {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.fileInputTextData .filetitle {
+  font-size: 14px;
+  margin-right: 10px;
+  flex: calc(80% - 50px);
+  margin-right: 50px;
+}
+
+.fileInputTextData .delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: calc(20% - 50px);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.fileuploadcontainer input[type="file"] {
+  display: none;
+}
