@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Loader from "../../components/loader";
 import FileInput from "../../components/file";
-import "./VideoUpload.css";
+import "./FileUpload.css";
 import config from "../../config";
 import { Link } from "react-router-dom";
 class VideoUpload extends Component {

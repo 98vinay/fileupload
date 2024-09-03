@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./ImageViewer.css";
+import "./FileViewer.css";
 import Loader from "../../components/loader";
 import { Link } from "react-router-dom";
 import config from "../../config";

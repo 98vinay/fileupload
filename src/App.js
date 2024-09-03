@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 import config from "./config";
-import VideoUpload from "./containers/Upload/VideoUpload";
+import FileUpload from "./containers/Upload/FileUpload";
 import Home from "./containers/Home/Home";
-import ImageViewer from "./containers/Receive/ImageViewer";
+import FileViewer from "./containers/Receive/FileViewer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 function App() {
   const Router = createBrowserRouter([
@@ -13,12 +13,12 @@ function App() {
     },
     {
       path: config.upload,
-      element: <VideoUpload base={config.URL} path={config.upload} />,
+      element: <FileUpload base={config.URL} path={config.upload} />,
     },
     {
       path: config.receive,
       element: (
-        <ImageViewer
+        <FileViewer
           base={config.URL}
           path={config.receive}
           listEndpoint={config.listImages}

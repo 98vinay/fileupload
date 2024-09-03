@@ -8,6 +8,7 @@ class Home extends Component {
     loading: false,
     error: false,
   };
+  // make a get call to connect for the server
   componentDidMount() {
     this.setState({ loading: true });
     fetch(this.props.base)
